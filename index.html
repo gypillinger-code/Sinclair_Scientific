@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#282421"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png"><title>Sinclair Scientific</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#282421;color:#f4e8d7;font-family:system-ui,sans-serif;padding:10px 10px 20px}.device,details{width:min(100%,410px);margin:auto}.device{background:linear-gradient(115deg,#f1e2ca,#d3b99d);border:2px solid #f9ecd8;border-radius:25px;padding:clamp(8px,2.8vw,15px);box-shadow:inset 0 -5px 12px #94785e,0 10px 25px #0007}.glass{background:linear-gradient(165deg,#21101e,#0d080f 60%,#291224);border:3px solid #33262b;border-radius:12px;min-height:78px;height:clamp(78px,14svh,113px);display:grid;place-items:center;box-shadow:inset 0 3px 12px #000,0 4px 7px #66524370}.glass svg{width:89%;height:73%;overflow:visible;filter:drop-shadow(0 0 5px #f14369a0)}.face{height:clamp(78px,16svh,139px);display:flex;justify-content:space-between;align-items:end;gap:8px;padding:0 4% 11px;color:#211814}.brand{line-height:1.04}.brand b{display:block;font-size:clamp(24px,8vw,41px);letter-spacing:-.065em;font-style:italic;font-family:Arial,sans-serif;font-weight:950}.brand span{font-size:clamp(15px,4.9vw,23px)}.constants{font-family:Arial,sans-serif;font-size:clamp(10px,3.2vw,15px);white-space:nowrap;line-height:1.15}.constants div{display:grid;grid-template-columns:3.7em auto}
+.pad{background:linear-gradient(140deg,#2f2825,#171416);border-radius:15px;border:1px solid #151114;padding:7px 10px 9px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px clamp(7px,3vw,16px);box-shadow:inset 0 0 10px #000;color:#eee1ce}.key{display:grid;grid-template-rows:16px clamp(39px,6.3svh,55px) 15px;align-items:center;text-align:center;line-height:1;font-size:clamp(12px,4vw,20px);position:relative}.key.op{font-size:clamp(10px,3.15vw,14px)}.op::before{content:'▲';position:absolute;left:-10px;top:2px;font-size:9px}.op::after{content:'▼';position:absolute;left:-10px;bottom:2px;font-size:9px}.op .line{position:absolute;left:-6px;top:15px;bottom:15px;border-left:1px solid #e2d0bc;pointer-events:none}button{font:inherit;touch-action:manipulation;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}.cap{height:100%;width:100%;border:1px solid #95816e;border-radius:9px;background:linear-gradient(#e9d9bf,#bba48a);color:#241815;box-shadow:inset 0 3px 4px #fffb,inset 0 -4px 5px #654a3970,0 3px 4px #000b;font-size:29px}.blue{background:linear-gradient(#158cbb,#005c87);border-color:#004966;box-shadow:inset 0 3px 5px #a2ecff80,inset 0 -4px 5px #002e4c80,0 3px 4px #000b}.cap:active,.cap[aria-pressed=true]:not(.switch){transform:translateY(2px);filter:brightness(1.22)}button:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:2px}.lit{color:#ffd286}.power{grid-column:3/5;align-self:center;justify-self:center;display:flex;align-items:center;gap:8px;padding-left:9px}.switch{height:51px;width:clamp(43px,14vw,66px);border:1px solid #003752;background:#084c67;border-radius:8px;padding:0 2px;display:flex;align-items:start}.switch i{display:block;height:36px;width:100%;border-radius:7px;transition:transform .12s}.switch[aria-pressed=true] i{transform:translateY(12px)}.power span{font:15px Arial;display:grid;gap:19px}.power span b{font-weight:400}.power[data-on=true] b:first-child,.power[data-on=false] b:last-child{opacity:.63}
+details{margin-top:11px;font-size:14px}summary{cursor:pointer;text-align:center;padding:9px;color:#e9d6c1}.help{background:#f2e2c9;color:#2c231d;border-radius:12px;padding:5px 15px 15px}.help p{margin:10px 0}.help code{white-space:normal;font-weight:700}.help table{width:100%;border-collapse:collapse}.help th,.help td{text-align:left;border-bottom:1px solid #cbb59e;padding:5px}
+</style></head><body>
+<main class="device" aria-label="Sinclair Scientific számológép">
+<div class="glass" role="status" aria-label="Kijelző kikapcsolva"><svg viewBox="0 0 270 41" aria-hidden="true"></svg></div>
+<div class="face"><div class="brand"><b>sinclair</b><span>Scientific</span></div><div class="constants"><div><span>1 rad</span>57·2958°</div><div><span>ln 10</span>2·30259</div><div><span>e</span>2·71828</div><div><span>π</span>3·14159</div></div></div>
+<div class="pad"></div>
+</main>
+<details><summary>A fedél útmutatója</summary><div class="help">
+<p>A kék kapcsolóval kapcsold be. A tizedespont automatikusan az első számjegy után kerül. <code>1 2 3 E 1</code> → <strong>1.2300 01</strong>, azaz 12,3. Negatív kitevőhöz nyomd meg a <code>−</code> gombot közvetlenül az <code>E</code> után.</p>
+<p>Az első számot a <code>C A +</code> sorral tárolod, ahol <code>A</code> a szám. Ezután üsd be a második számot, majd a műveletet. Például 17 ÷ 3 → <code>C 1 7 E 1 + 3 ÷</code>. Negatív kezdőértékhez vond ki a számot nullából <code>C A −</code>.</p>
+<table><thead><tr><th>Gomb</th><th>▲</th><th>▼</th></tr></thead><tbody><tr><td>×</td><td>log₁₀</td><td>10ˣ</td></tr><tr><td>÷</td><td>tan</td><td>arctan</td></tr><tr><td>+</td><td>sin</td><td>arcsin</td></tr><tr><td>−</td><td>cos</td><td>arccos</td></tr></tbody></table>
+<p>A trigonometrikus függvények radiánban működnek. Például sin(0,5) → <code>5 E − 1 ▲ +</code>. A gyökvonás a fedél mintája szerint, például √9 → <code>9 ▲ × 2 ÷ ▼ ×</code>.</p>
+</div></details>
+<script>
+'use strict';
+const grid = document.querySelector('.pad');
+const glass = document.querySelector('.glass');
+const screen = glass.firstElementChild;
+const rows = [
+  [['▲'],['C'],['power']],
+  [['7'],['8'],['9'],['×','log','antilog']],
+  [['4'],['5'],['6'],['÷','tan','arctan']],
+  [['1'],['2'],['3'],['+','sin','arcsin']],
+  [['▼'],['0'],['E'],['−','cos','arccos']]
+];
+for (const row of rows) for (const [key, up, down] of row) {
+  if (key === 'power') {
+    grid.insertAdjacentHTML('beforeend','<div class="power" data-on="false"><button class="switch" aria-label="Be- és kikapcsolás" aria-pressed="false" data-key="power"><i class="blue"></i></button><span aria-hidden="true"><b>off</b><b>on</b></span></div>');
+    continue;
+  }
+  const op = Boolean(up);
+  grid.insertAdjacentHTML('beforeend',`<div class="key ${op?'op':''}"><span class="up">${up||key}</span><button class="cap ${/^\d$/.test(key)?'blue':''}" data-key="${key}" aria-label="${key}" ${'▲▼'.includes(key)?'aria-pressed="false"':''}>${op?key:''}</button><span class="down">${down||''}</span>${op?'<i class="line"></i>':''}</div>`);
+}
+const power = grid.querySelector('.switch');
+const binary = {'+':(a,b)=>a+b,'−':(a,b)=>a-b,'×':(a,b)=>a*b,'÷':(a,b)=>a/b};
+const scientific = {
+  '▲':{'×':Math.log10,'÷':Math.tan,'+':Math.sin,'−':Math.cos},
+  '▼':{'×':x=>10**x,'÷':Math.atan,'+':Math.asin,'−':Math.acos}
+};
+let on=false, accumulator=0, digits=null, exponent=null, exponentNegative=false, shift='';
+function clearEntry() {
+  digits=null;
+  exponent=null;
+  exponentNegative=false;
+  shift='';
+}
+function entryValue() {
+  if (!digits) return 0;
+  const mantissa=digits[0]+'.'+digits.slice(1);
+  return Number(mantissa+'e'+(exponentNegative?'-':'+')+(exponent||'0'));
+}
+function press(key) {
+  if (key==='power') {
+    on=!on;
+    accumulator=0;
+    clearEntry();
+  } else if (!on) return;
+  else if (key==='C') {
+    accumulator=0;
+    clearEntry();
+  } else if (/^\d$/.test(key)) {
+    if (exponent!==null) {
+      exponent=(exponent+key).slice(-2);
+    } else if ((digits||'').length<6) digits=(digits||'')+key;
+  } else if (key==='E' && digits!==null && exponent===null) {
+    exponent='';
+  } else if (key==='▲'||key==='▼') {
+    shift=key;
+  } else if (key==='−' && exponent==='' && !shift) {
+    exponentNegative=!exponentNegative;
+  } else if (Object.hasOwn(binary,key)) {
+    const rhs=entryValue();
+    const result=shift?scientific[shift][key](digits===null?accumulator:rhs):binary[key](accumulator,rhs);
+    accumulator=Number.isFinite(result) && result!==0?Number(result.toPrecision(6)):result;
+    clearEntry();
+  }
+  render();
+}
+const segments=['M5 2h15','M23 5v12','M23 23v12','M5 38h15','M2 23v12','M2 5v12','M5 20h15'];
+const patterns={'0':'012345','1':'12','2':'01643','3':'01623','4':'5612','5':'05623','6':'056234','7':'012','8':'0123456','9':'012356','-':'6','E':'05643','r':'64'};
+function output() {
+  if (digits!==null) {
+    const five=digits.padEnd(5,'0').slice(0,5);
+    return ' '+five[0]+'.'+five.slice(1)+(exponentNegative?'-':' ')+(exponent||'0').padStart(2,'0');
+  }
+  if (!Number.isFinite(accumulator)) return '   Err   ';
+  const [mantissa, exp] = Math.abs(accumulator).toExponential(5).split('e');
+  const e=Number(exp);
+  if (e>99) return '   Err   ';
+  if (e< -99) return ' 0.0000 00';
+  return (accumulator<0?'-':' ')+mantissa.slice(0,6)+(e<0?'-':' ')+String(Math.abs(e)).padStart(2,'0');
+}
+function render() {
+  const value=on?output():'';
+  glass.setAttribute('aria-label',on?'Kijelző: '+value.trim():'Kijelző kikapcsolva');
+  let offset=0, shapes='';
+  for (const char of value) {
+    if (char==='.') {
+      shapes+=`<circle cx="${offset-2}" cy="38" r="1.7" fill="#ff5b70"/>`;
+      continue;
+    }
+    shapes+=`<g transform="translate(${offset} 0)">`;
+    segments.forEach((path,index)=>{
+      const active=(patterns[char]||'').includes(index);
+      shapes+=`<path d="${path}" fill="none" stroke="${active?'#ff526a':'#381722'}" stroke-width="3.1" stroke-linecap="round"/>`;
+    });
+    shapes+='</g>';
+    offset+=30;
+  }
+  screen.innerHTML=shapes;
+  power.setAttribute('aria-pressed',String(on));
+  power.parentElement.dataset.on=String(on);
+  for(const arrow of ['▲','▼']) grid.querySelector(`[data-key="${arrow}"]`).setAttribute('aria-pressed',String(shift===arrow));
+  for(const op of grid.querySelectorAll('.op')) {
+    op.querySelector('.up').classList.toggle('lit',shift==='▲');
+    op.querySelector('.down').classList.toggle('lit',shift==='▼');
+  }
+}
+grid.addEventListener('click',event=>{
+  const button=event.target.closest('button[data-key]');
+  if(button) press(button.dataset.key);
+});
+render();
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(error => {
+    console.warn('Offline mód nem indult el.', error);
+  });
+}
+</script></body></html>
